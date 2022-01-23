@@ -35,7 +35,7 @@ new Vue({
     monster_attack: function () {
       let point = Math.ceil(Math.random() * 15);
       this.player_heal -= point;
-      this.add_to_log({ turn: "m", text: `Monster requested first aid: ${point}` });
+      this.add_to_log({ turn: "m", text: `Monster attack: ${point}` });
     },
     add_to_log: function (log) {
       this.logs.push(log);
@@ -50,6 +50,7 @@ new Vue({
         if (result) {
           this.player_heal = 100;
           this.monster_heal = 100;
+          this.logs = [];
         }
       } else if (value >= 100) {
         this.player_heal = 100;
@@ -62,6 +63,7 @@ new Vue({
         if (result) {
           this.player_heal = 100;
           this.monster_heal = 100;
+          this.logs = [];
         }
       }
     },

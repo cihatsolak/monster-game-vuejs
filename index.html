@@ -13,7 +13,7 @@
           <h1 class="text-center">You</h1>
           <div class="healthbar">
             <div
-              :style="{ width: player_heal + '%' }"
+              :style="player_progress"
               class="healthbar text-center"
               style="background-color: green; margin: 0; color: white"
             >
@@ -25,7 +25,7 @@
           <h1 class="text-center">Monster</h1>
           <div class="healthbar">
             <div
-              :style="{ width: monster_heal + '%' }"
+              :style="monster_progress"
               class="healthbar text-center"
               style="background-color: green; margin: 0; color: white"
             >
